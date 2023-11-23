@@ -1,7 +1,7 @@
 from Bio import Entrez
 
 def fetch_metadata(accession_numbers):
-    Entrez.email = "euginemukhaye17@gemail.com"  # Replace with your email address
+    Entrez.email = "youremail@gemail.com"  # Replace with your email address
     try:
         handle = Entrez.efetch(db="nucleotide", id=accession_numbers, retmode="xml")
         records = Entrez.read(handle)
@@ -37,7 +37,7 @@ def extract_metadata(record):
 
 def main():
     # Replace 'full/path/to/accession_numbers.txt' with the actual path to your file
-    file_path = '/mnt/c/Users/SA/OneDrive/Desktop/CCHFV/Bioinfor_analysis/accession_numbers.txt'
+    file_path = '/path_to/accession_numbers.txt'
 
     with open(file_path, "r") as file:
         accession_numbers = [line.strip() for line in file]
